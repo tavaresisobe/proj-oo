@@ -1,14 +1,16 @@
+import logging
 from mediator.library_mediator import LibraryMediator
 from mediator.library_user_mediator import LibraryUserMediator
 from src.book_category import BookCategory
 from src.book_notifier import BookAvailabilityNotifier
+from external_user_adapter import ExternalUserAdapter
+from external_catalog_adapter import ExternalCatalogAdapter
 from src.user import User
-import logging
 
 LOGGER = logging.getLogger('sLogger')
 
 class LibraryFacade:
-    def __init__(self):
+    def __init__(self, external_catalog_adapter=None, external_user_adapter=None):
         self.library_mediator = LibraryMediator()
         self.user_library_mediator = LibraryUserMediator()
         self.root_category = BookCategory("Root")
@@ -16,6 +18,17 @@ class LibraryFacade:
         self.inventory = [] #lista de livros (guarda objetos do tipo Book)
         self.users = [] #lista de usuarios (guarda objetos do tipo User)
         self.loan = [] #lista de alugueis (guarda objetos do tipo Loan)
+
+        if external_catalog_adapter:
+            self.integrate_external_books(external_catalog_adapter)
+        if external_user_adapter:
+            self.integrate_external_users(external_user_adapter)
+
+    def integrate_external_books(self, external_catalog_adapter: ExternalCatalogAdapter) -> None:
+        external_catalog_adapter.integrate_books(self.inventory)
+
+    def integrate_external_users(self, external_user_adapter: ExternalUserAdapter) -> None:
+        external_user_adapter.integrate_users(self.users)
 
     def register_book(self, book_id: int, title: str, author: str, category: str) -> None:
         book_model = self.library_mediator.insert_book(actual_inventory=self.inventory, 

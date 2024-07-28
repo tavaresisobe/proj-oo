@@ -59,7 +59,7 @@ class LibraryFacadeTest(IsolatedAsyncioTestCase):
         self.sut.check_availability(book_id=2)
 
     async def test_to_serach_book_by_category(self):
-        self.set_up_books()
+        self.sut.register_book(book_id=1, title=BOOK.get("title"), author=BOOK.get("author"), category=BOOK.get("category"))
         self.sut.search_books_by_category(category_name="Ficção")
 
     async def test_to_rent_book(self):
@@ -76,6 +76,6 @@ class LibraryFacadeTest(IsolatedAsyncioTestCase):
         self.sut.rent_book(ra="158552", book_id=2)
         self.sut.rent_book(ra="158552", book_id=4)
 
-        self.sut.return_rent_book(ra="158552", book_id=1)
+        self.sut.return_rent_book(ra="158552", book_id=1) #devolvendo o livro com id 1
 
-        self.sut.rent_book(ra="129121", book_id=1)
+        self.sut.rent_book(ra="129121", book_id=1) #alugando o livro com o id 1, novamente
