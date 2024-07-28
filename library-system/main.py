@@ -1,8 +1,7 @@
 import unittest
-from library_facade import LibraryFacade
+from facade.library_facade import LibraryFacade
 from models.user_type import UserType
-from user import User
-from user_repo import UserRepo
+from src.user import User
 from user_seed import seed_users
 
 

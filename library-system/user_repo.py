@@ -1,4 +1,4 @@
-from user import User
+from src.user import User
 
 class UserRepo:
     def __init__(self):

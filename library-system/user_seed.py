@@ -1,5 +1,5 @@
 from user_repo import UserRepo
-from user import User
+from src.user import User
 from models.user_type import UserType
 
 
