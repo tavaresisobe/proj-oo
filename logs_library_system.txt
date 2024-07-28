@@ -1,0 +1,418 @@
+gustavo:~/library-system$ pytest --log-cli-level=DEBUG test/test_library_facade.py -vv
+================================================================= test session starts ==================================================================
+platform linux -- Python 3.11.4, pytest-8.0.2, pluggy-1.4.0 -- /home/gustavo/.pyenv/versions/3.11.4/bin/python3.11
+cachedir: .pytest_cache
+rootdir: /home/gustavo/library-system
+plugins: anyio-4.2.0
+collected 8 items                                                                                                                                      
+
+test/test_library_facade.py::LibraryFacadeTest::test_to_check_avaibility 
+-------------------------------------------------------------------- live log call ---------------------------------------------------------------------
+DEBUG    asyncio:selector_events.py:54 Using selector: EpollSelector
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 1
+INFO     sLogger:library_mediator.py:22 geting book with id 1
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_facade.py:44 Categoria cadastrada com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 2
+INFO     sLogger:library_mediator.py:22 geting book with id 2
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 3
+INFO     sLogger:library_mediator.py:22 geting book with id 3
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 4
+INFO     sLogger:library_mediator.py:22 geting book with id 4
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_mediator.py:55 checking existence of id 2
+INFO     sLogger:library_mediator.py:22 geting book with id 2
+INFO     sLogger:library_mediator.py:47 checking avaibility to book with id 2
+DEBUG    sLogger:library_facade.py:95 O livro com ID 2 está disponível
+INFO     sLogger:library_facade.py:99 Verificacao concluida com sucesso
+DEBUG    asyncio:base_events.py:676 Close <_UnixSelectorEventLoop running=False closed=False debug=True>
+PASSED                                                                                                                                           [ 12%]
+test/test_library_facade.py::LibraryFacadeTest::test_to_listing_all_books 
+-------------------------------------------------------------------- live log call ---------------------------------------------------------------------
+DEBUG    asyncio:selector_events.py:54 Using selector: EpollSelector
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 1
+INFO     sLogger:library_mediator.py:22 geting book with id 1
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_facade.py:44 Categoria cadastrada com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 2
+INFO     sLogger:library_mediator.py:22 geting book with id 2
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 3
+INFO     sLogger:library_mediator.py:22 geting book with id 3
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 4
+INFO     sLogger:library_mediator.py:22 geting book with id 4
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_mediator.py:30 getting books
+DEBUG    sLogger:library_facade.py:59 Livros cadastrados:
+ID: 1, Título: Harry Potter, Categoria: Ficção
+ID: 1, Título: Harry Potter, Categoria: Ficção
+ID: 2, Título: J.R.R. Tolkien, Categoria: Ficção
+ID: 1, Título: Harry Potter, Categoria: Ficção
+ID: 3, Título: 1984, Categoria: Ficção
+ID: 1, Título: Harry Potter, Categoria: Ficção
+ID: 4, Título: Brave New World, Categoria: Ficção
+ID: 1, Título: Harry Potter, Categoria: Ficção
+INFO     sLogger:library_facade.py:63 Busca concluida com sucesso
+DEBUG    asyncio:base_events.py:676 Close <_UnixSelectorEventLoop running=False closed=False debug=True>
+PASSED                                                                                                                                           [ 25%]
+test/test_library_facade.py::LibraryFacadeTest::test_to_register_books 
+-------------------------------------------------------------------- live log call ---------------------------------------------------------------------
+DEBUG    asyncio:selector_events.py:54 Using selector: EpollSelector
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 1
+INFO     sLogger:library_mediator.py:22 geting book with id 1
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_facade.py:44 Categoria cadastrada com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 2
+INFO     sLogger:library_mediator.py:22 geting book with id 2
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 3
+INFO     sLogger:library_mediator.py:22 geting book with id 3
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 4
+INFO     sLogger:library_mediator.py:22 geting book with id 4
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+DEBUG    asyncio:base_events.py:676 Close <_UnixSelectorEventLoop running=False closed=False debug=True>
+PASSED                                                                                                                                           [ 37%]
+test/test_library_facade.py::LibraryFacadeTest::test_to_remove_books 
+-------------------------------------------------------------------- live log call ---------------------------------------------------------------------
+DEBUG    asyncio:selector_events.py:54 Using selector: EpollSelector
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 1
+INFO     sLogger:library_mediator.py:22 geting book with id 1
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_facade.py:44 Categoria cadastrada com sucesso
+INFO     sLogger:library_mediator.py:55 checking existence of id 1
+INFO     sLogger:library_mediator.py:22 geting book with id 1
+INFO     sLogger:library_mediator.py:38 removing book with id 1
+INFO     sLogger:library_facade.py:53 Livro removido com sucesso
+DEBUG    asyncio:base_events.py:676 Close <_UnixSelectorEventLoop running=False closed=False debug=True>
+PASSED                                                                                                                                           [ 50%]
+test/test_library_facade.py::LibraryFacadeTest::test_to_rent_book 
+-------------------------------------------------------------------- live log call ---------------------------------------------------------------------
+DEBUG    asyncio:selector_events.py:54 Using selector: EpollSelector
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 1
+INFO     sLogger:library_mediator.py:22 geting book with id 1
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_facade.py:44 Categoria cadastrada com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 2
+INFO     sLogger:library_mediator.py:22 geting book with id 2
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 3
+INFO     sLogger:library_mediator.py:22 geting book with id 3
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 4
+INFO     sLogger:library_mediator.py:22 geting book with id 4
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_user_mediator.py:66 Getting user with ra 158552
+INFO     sLogger:loan.py:15 Processing rental for Cristiano Ronaldo for book Harry Potter
+INFO     sLogger:library_facade.py:107 Empréstimo do livro 1 realizado com sucesso para o ra 158552
+DEBUG    asyncio:base_events.py:676 Close <_UnixSelectorEventLoop running=False closed=False debug=True>
+PASSED                                                                                                                                           [ 62%]
+test/test_library_facade.py::LibraryFacadeTest::test_to_return_loan_book 
+-------------------------------------------------------------------- live log call ---------------------------------------------------------------------
+DEBUG    asyncio:selector_events.py:54 Using selector: EpollSelector
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 1
+INFO     sLogger:library_mediator.py:22 geting book with id 1
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_facade.py:44 Categoria cadastrada com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 2
+INFO     sLogger:library_mediator.py:22 geting book with id 2
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 3
+INFO     sLogger:library_mediator.py:22 geting book with id 3
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 4
+INFO     sLogger:library_mediator.py:22 geting book with id 4
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_user_mediator.py:66 Getting user with ra 158552
+INFO     sLogger:loan.py:15 Processing rental for Cristiano Ronaldo for book Harry Potter
+INFO     sLogger:library_facade.py:107 Empréstimo do livro 1 realizado com sucesso para o ra 158552
+INFO     sLogger:library_user_mediator.py:66 Getting user with ra 129121
+INFO     sLogger:loan.py:15 Processing rental for José Mourinho for book 1984
+INFO     sLogger:library_facade.py:107 Empréstimo do livro 3 realizado com sucesso para o ra 129121
+INFO     sLogger:library_user_mediator.py:66 Getting user with ra 158552
+INFO     sLogger:loan.py:15 Processing rental for Cristiano Ronaldo for book J.R.R. Tolkien
+INFO     sLogger:library_facade.py:107 Empréstimo do livro 2 realizado com sucesso para o ra 158552
+INFO     sLogger:library_user_mediator.py:66 Getting user with ra 158552
+INFO     sLogger:loan.py:15 Processing rental for Cristiano Ronaldo for book Brave New World
+INFO     sLogger:library_facade.py:107 Empréstimo do livro 4 realizado com sucesso para o ra 158552
+INFO     sLogger:library_user_mediator.py:66 Getting user with ra 158552
+INFO     sLogger:loan.py:25 Processing reversal rental for Cristiano Ronaldo for book Harry Potter
+INFO     sLogger:loan.py:28 Reversal rental for book Harry Potter by Cristiano Ronaldo successful
+INFO     sLogger:library_facade.py:115 Devolução do livro 1 realizada com sucesso para o ra 158552
+INFO     sLogger:library_user_mediator.py:66 Getting user with ra 129121
+INFO     sLogger:loan.py:15 Processing rental for José Mourinho for book Harry Potter
+INFO     sLogger:library_facade.py:107 Empréstimo do livro 1 realizado com sucesso para o ra 129121
+DEBUG    asyncio:base_events.py:676 Close <_UnixSelectorEventLoop running=False closed=False debug=True>
+PASSED                                                                                                                                           [ 75%]
+test/test_library_facade.py::LibraryFacadeTest::test_to_search_book 
+-------------------------------------------------------------------- live log call ---------------------------------------------------------------------
+DEBUG    asyncio:selector_events.py:54 Using selector: EpollSelector
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 1
+INFO     sLogger:library_mediator.py:22 geting book with id 1
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_facade.py:44 Categoria cadastrada com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 2
+INFO     sLogger:library_mediator.py:22 geting book with id 2
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 3
+INFO     sLogger:library_mediator.py:22 geting book with id 3
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 4
+INFO     sLogger:library_mediator.py:22 geting book with id 4
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_mediator.py:22 geting book with id 1
+DEBUG    sLogger:library_facade.py:75 Livro com id correspondente: ID: 1, Título: Harry Potter, Autor: Joanne Rowling, Disponibilidade: Disponível, Categoria: Ficção
+INFO     sLogger:library_facade.py:79 Busca concluida com sucesso
+DEBUG    asyncio:base_events.py:676 Close <_UnixSelectorEventLoop running=False closed=False debug=True>
+PASSED                                                                                                                                           [ 87%]
+test/test_library_facade.py::LibraryFacadeTest::test_to_serach_book_by_category 
+-------------------------------------------------------------------- live log call ---------------------------------------------------------------------
+DEBUG    asyncio:selector_events.py:54 Using selector: EpollSelector
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 1
+INFO     sLogger:library_mediator.py:22 geting book with id 1
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_facade.py:44 Categoria cadastrada com sucesso
+DEBUG    sLogger:library_facade.py:86 Livro: Harry Potter, Autor: Joanne Rowling, ID: 1
+INFO     sLogger:library_facade.py:87 Listagem de livros da categoria Ficção concluída com sucesso
+DEBUG    asyncio:base_events.py:676 Close <_UnixSelectorEventLoop running=False closed=False debug=True>
+PASSED                                                                                                                                           [100%]
+
+================================================================== 8 passed in 0.27s ===================================================================
+gustavo@DM-003011:~/library-system$ pytest --log-cli-level=DEBUG test/test_library_facade.py -vv
+========================================================================================= test session starts ==========================================================================================
+platform linux -- Python 3.11.4, pytest-8.0.2, pluggy-1.4.0 -- /home/gustavo/.pyenv/versions/3.11.4/bin/python3.11
+cachedir: .pytest_cache
+rootdir: /home/gustavo/library-system
+plugins: anyio-4.2.0
+collected 8 items                                                                                                                                                                                      
+
+test/test_library_facade.py::LibraryFacadeTest::test_to_check_avaibility 
+-------------------------------------------------------------------------------------------- live log call ---------------------------------------------------------------------------------------------
+DEBUG    asyncio:selector_events.py:54 Using selector: EpollSelector
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 1
+INFO     sLogger:library_mediator.py:22 geting book with id 1
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_facade.py:44 Categoria cadastrada com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 2
+INFO     sLogger:library_mediator.py:22 geting book with id 2
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 3
+INFO     sLogger:library_mediator.py:22 geting book with id 3
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 4
+INFO     sLogger:library_mediator.py:22 geting book with id 4
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_mediator.py:55 checking existence of id 2
+INFO     sLogger:library_mediator.py:22 geting book with id 2
+INFO     sLogger:library_mediator.py:47 checking avaibility to book with id 2
+DEBUG    sLogger:library_facade.py:95 O livro com ID 2 está disponível
+INFO     sLogger:library_facade.py:99 Verificacao concluida com sucesso
+DEBUG    asyncio:base_events.py:676 Close <_UnixSelectorEventLoop running=False closed=False debug=True>
+PASSED                                                                                                                                                                                           [ 12%]
+test/test_library_facade.py::LibraryFacadeTest::test_to_listing_all_books 
+-------------------------------------------------------------------------------------------- live log call ---------------------------------------------------------------------------------------------
+DEBUG    asyncio:selector_events.py:54 Using selector: EpollSelector
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 1
+INFO     sLogger:library_mediator.py:22 geting book with id 1
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_facade.py:44 Categoria cadastrada com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 2
+INFO     sLogger:library_mediator.py:22 geting book with id 2
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 3
+INFO     sLogger:library_mediator.py:22 geting book with id 3
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 4
+INFO     sLogger:library_mediator.py:22 geting book with id 4
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_mediator.py:30 getting books
+DEBUG    sLogger:library_facade.py:59 Livros cadastrados:
+ID: 1, Título: Harry Potter, Categoria: Ficção
+ID: 1, Título: Harry Potter, Categoria: Ficção
+ID: 2, Título: J.R.R. Tolkien, Categoria: Ficção
+ID: 1, Título: Harry Potter, Categoria: Ficção
+ID: 3, Título: 1984, Categoria: Ficção
+ID: 1, Título: Harry Potter, Categoria: Ficção
+ID: 4, Título: Brave New World, Categoria: Ficção
+ID: 1, Título: Harry Potter, Categoria: Ficção
+INFO     sLogger:library_facade.py:63 Busca concluida com sucesso
+DEBUG    asyncio:base_events.py:676 Close <_UnixSelectorEventLoop running=False closed=False debug=True>
+PASSED                                                                                                                                                                                           [ 25%]
+test/test_library_facade.py::LibraryFacadeTest::test_to_register_books 
+-------------------------------------------------------------------------------------------- live log call ---------------------------------------------------------------------------------------------
+DEBUG    asyncio:selector_events.py:54 Using selector: EpollSelector
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 1
+INFO     sLogger:library_mediator.py:22 geting book with id 1
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_facade.py:44 Categoria cadastrada com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 2
+INFO     sLogger:library_mediator.py:22 geting book with id 2
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 3
+INFO     sLogger:library_mediator.py:22 geting book with id 3
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 4
+INFO     sLogger:library_mediator.py:22 geting book with id 4
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+DEBUG    asyncio:base_events.py:676 Close <_UnixSelectorEventLoop running=False closed=False debug=True>
+PASSED                                                                                                                                                                                           [ 37%]
+test/test_library_facade.py::LibraryFacadeTest::test_to_remove_books 
+-------------------------------------------------------------------------------------------- live log call ---------------------------------------------------------------------------------------------
+DEBUG    asyncio:selector_events.py:54 Using selector: EpollSelector
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 1
+INFO     sLogger:library_mediator.py:22 geting book with id 1
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_facade.py:44 Categoria cadastrada com sucesso
+INFO     sLogger:library_mediator.py:55 checking existence of id 1
+INFO     sLogger:library_mediator.py:22 geting book with id 1
+INFO     sLogger:library_mediator.py:38 removing book with id 1
+INFO     sLogger:library_facade.py:53 Livro removido com sucesso
+DEBUG    asyncio:base_events.py:676 Close <_UnixSelectorEventLoop running=False closed=False debug=True>
+PASSED                                                                                                                                                                                           [ 50%]
+test/test_library_facade.py::LibraryFacadeTest::test_to_rent_book 
+-------------------------------------------------------------------------------------------- live log call ---------------------------------------------------------------------------------------------
+DEBUG    asyncio:selector_events.py:54 Using selector: EpollSelector
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 1
+INFO     sLogger:library_mediator.py:22 geting book with id 1
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_facade.py:44 Categoria cadastrada com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 2
+INFO     sLogger:library_mediator.py:22 geting book with id 2
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 3
+INFO     sLogger:library_mediator.py:22 geting book with id 3
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 4
+INFO     sLogger:library_mediator.py:22 geting book with id 4
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_user_mediator.py:66 Getting user with ra 158552
+INFO     sLogger:loan.py:15 Processing rental for Cristiano Ronaldo for book Harry Potter
+INFO     sLogger:library_facade.py:107 Empréstimo do livro 1 realizado com sucesso para o ra 158552
+DEBUG    asyncio:base_events.py:676 Close <_UnixSelectorEventLoop running=False closed=False debug=True>
+PASSED                                                                                                                                                                                           [ 62%]
+test/test_library_facade.py::LibraryFacadeTest::test_to_return_loan_book 
+-------------------------------------------------------------------------------------------- live log call ---------------------------------------------------------------------------------------------
+DEBUG    asyncio:selector_events.py:54 Using selector: EpollSelector
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 1
+INFO     sLogger:library_mediator.py:22 geting book with id 1
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_facade.py:44 Categoria cadastrada com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 2
+INFO     sLogger:library_mediator.py:22 geting book with id 2
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 3
+INFO     sLogger:library_mediator.py:22 geting book with id 3
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 4
+INFO     sLogger:library_mediator.py:22 geting book with id 4
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_user_mediator.py:66 Getting user with ra 158552
+INFO     sLogger:loan.py:15 Processing rental for Cristiano Ronaldo for book Harry Potter
+INFO     sLogger:library_facade.py:107 Empréstimo do livro 1 realizado com sucesso para o ra 158552
+INFO     sLogger:library_user_mediator.py:66 Getting user with ra 129121
+INFO     sLogger:loan.py:15 Processing rental for José Mourinho for book 1984
+INFO     sLogger:library_facade.py:107 Empréstimo do livro 3 realizado com sucesso para o ra 129121
+INFO     sLogger:library_user_mediator.py:66 Getting user with ra 158552
+INFO     sLogger:loan.py:15 Processing rental for Cristiano Ronaldo for book J.R.R. Tolkien
+INFO     sLogger:library_facade.py:107 Empréstimo do livro 2 realizado com sucesso para o ra 158552
+INFO     sLogger:library_user_mediator.py:66 Getting user with ra 158552
+INFO     sLogger:loan.py:15 Processing rental for Cristiano Ronaldo for book Brave New World
+INFO     sLogger:library_facade.py:107 Empréstimo do livro 4 realizado com sucesso para o ra 158552
+INFO     sLogger:library_user_mediator.py:66 Getting user with ra 158552
+INFO     sLogger:loan.py:25 Processing reversal rental for Cristiano Ronaldo for book Harry Potter
+INFO     sLogger:loan.py:28 Reversal rental for book Harry Potter by Cristiano Ronaldo successful
+INFO     sLogger:library_facade.py:115 Devolução do livro 1 realizada com sucesso para o ra 158552
+INFO     sLogger:library_user_mediator.py:66 Getting user with ra 129121
+INFO     sLogger:loan.py:15 Processing rental for José Mourinho for book Harry Potter
+INFO     sLogger:library_facade.py:107 Empréstimo do livro 1 realizado com sucesso para o ra 129121
+DEBUG    asyncio:base_events.py:676 Close <_UnixSelectorEventLoop running=False closed=False debug=True>
+PASSED                                                                                                                                                                                           [ 75%]
+test/test_library_facade.py::LibraryFacadeTest::test_to_search_book 
+-------------------------------------------------------------------------------------------- live log call ---------------------------------------------------------------------------------------------
+DEBUG    asyncio:selector_events.py:54 Using selector: EpollSelector
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 1
+INFO     sLogger:library_mediator.py:22 geting book with id 1
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_facade.py:44 Categoria cadastrada com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 2
+INFO     sLogger:library_mediator.py:22 geting book with id 2
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 3
+INFO     sLogger:library_mediator.py:22 geting book with id 3
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 4
+INFO     sLogger:library_mediator.py:22 geting book with id 4
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_mediator.py:22 geting book with id 1
+DEBUG    sLogger:library_facade.py:75 Livro com id correspondente: ID: 1, Título: Harry Potter, Autor: Joanne Rowling, Disponibilidade: Disponível, Categoria: Ficção
+INFO     sLogger:library_facade.py:79 Busca concluida com sucesso
+DEBUG    asyncio:base_events.py:676 Close <_UnixSelectorEventLoop running=False closed=False debug=True>
+PASSED                                                                                                                                                                                           [ 87%]
+test/test_library_facade.py::LibraryFacadeTest::test_to_serach_book_by_category 
+-------------------------------------------------------------------------------------------- live log call ---------------------------------------------------------------------------------------------
+DEBUG    asyncio:selector_events.py:54 Using selector: EpollSelector
+INFO     sLogger:library_mediator.py:66 checking the recurrence of id 1
+INFO     sLogger:library_mediator.py:22 geting book with id 1
+INFO     sLogger:library_mediator.py:14 registering book
+INFO     sLogger:library_facade.py:38 Livro cadastrado com sucesso
+INFO     sLogger:library_facade.py:44 Categoria cadastrada com sucesso
+DEBUG    sLogger:library_facade.py:86 Livro: Harry Potter, Autor: Joanne Rowling, ID: 1
+INFO     sLogger:library_facade.py:87 Listagem de livros da categoria Ficção concluída com sucesso
+DEBUG    asyncio:base_events.py:676 Close <_UnixSelectorEventLoop running=False closed=False debug=True>
+PASSED                                                                                                                                                                                           [100%]
+
+========================================================================================== 8 passed in 0.15s ===========================================================================================
